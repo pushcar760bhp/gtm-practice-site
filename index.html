@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetherbloom • Timeless Treasures</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), 
+                  url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+    }
+    .product-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .product-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #e11d48;
+      transition: width 0.3s;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-3xl font-serif tracking-tight text-rose-700">Aetherbloom</h1>
+      
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#" class="nav-link hover:text-rose-600 transition">Shop</a>
+        <a href="#" class="nav-link hover:text-rose-600 transition">Collections</a>
+        <a href="#" class="nav-link hover:text-rose-600 transition">Journal</a>
+        <a href="#" class="nav-link hover:text-rose-600 transition">About</a>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <i class="fa-solid fa-magnifying-glass text-xl cursor-pointer hover:text-rose-600"></i>
+        <i class="fa-solid fa-user text-xl cursor-pointer hover:text-rose-600"></i>
+        <i class="fa-solid fa-bag-shopping text-xl cursor-pointer hover:text-rose-600 relative">
+          <span class="absolute -top-1 -right-1 bg-rose-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+        </i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg h-screen flex items-center text-white">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-6xl md:text-7xl font-serif tracking-tight mb-6">Where Nature Meets Magic</h2>
+      <p class="text-2xl mb-10 max-w-md mx-auto">Curated treasures for the soul — handpicked with love and intention.</p>
+      <a href="#shop" 
+         class="inline-block bg-white text-black px-10 py-5 rounded-full font-medium text-lg hover:bg-rose-50 transition">
+        Shop the Collection
+      </a>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-serif text-center mb-12">Our Worlds</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group relative overflow-hidden rounded-3xl h-96 cursor-pointer">
+          <img src="https://picsum.photos/id/1015/800/800" class="w-full h-full object-cover transition group-hover:scale-110 duration-500" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <h3 class="text-3xl font-medium text-white">Home & Sanctuary</h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl h-96 cursor-pointer">
+          <img src="https://picsum.photos/id/201/800/800" class="w-full h-full object-cover transition group-hover:scale-110 duration-500" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <h3 class="text-3xl font-medium text-white">Jewelry & Talismans</h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl h-96 cursor-pointer">
+          <img src="https://picsum.photos/id/237/800/800" class="w-full h-full object-cover transition group-hover:scale-110 duration-500" alt="">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <h3 class="text-3xl font-medium text-white">Wearable Poetry</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="shop" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-end mb-12">
+        <h2 class="text-4xl font-serif">New Arrivals</h2>
+        <a href="#" class="text-rose-600 hover:underline flex items-center gap-2">
+          View All <span class="text-xl">→</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+          <img src="https://picsum.photos/id/1015/600/600" class="w-full h-80 object-cover" alt="">
+          <div class="p-6">
+            <h3 class="font-medium text-lg">Moonlit Ceramic Vase</h3>
+            <p class="text-gray-500 text-sm">Hand-thrown stoneware</p>
+            <p class="mt-4 text-2xl font-medium">$89</p>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+          <img src="https://picsum.photos/id/201/600/600" class="w-full h-80 object-cover" alt="">
+          <div class="p-6">
+            <h3 class="font-medium text-lg">Amethyst Intention Necklace</h3>
+            <p class="text-gray-500 text-sm">Sterling silver + natural stone</p>
+            <p class="mt-4 text-2xl font-medium">$145</p>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+          <img src="https://picsum.photos/id/866/600/600" class="w-full h-80 object-cover" alt="">
+          <div class="p-6">
+            <h3 class="font-medium text-lg">Wildflower Linen Dress</h3>
+            <p class="text-gray-500 text-sm">Breathable & timeless</p>
+            <p class="mt-4 text-2xl font-medium">$165</p>
+          </div>
+        </div>
+
+        <div class="product-card bg-white rounded-3xl overflow-hidden border border-gray-100">
+          <img src="https://picsum.photos/id/669/600/600" class="w-full h-80 object-cover" alt="">
+          <div class="p-6">
+            <h3 class="font-medium text-lg">Sacred Geometry Journal</h3>
+            <p class="text-gray-500 text-sm">Handbound with gold foil</p>
+            <p class="mt-4 text-2xl font-medium">$48</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <div class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-leaf text-3xl text-emerald-400 mb-3"></i>
+        <p class="font-medium">Ethically Sourced</p>
+        <p class="text-sm text-gray-400">From artisans worldwide</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-truck text-3xl text-amber-400 mb-3"></i>
+        <p class="font-medium">Free Shipping</p>
+        <p class="text-sm text-gray-400">On orders over $150</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-shield-halved text-3xl text-sky-400 mb-3"></i>
+        <p class="font-medium">1 Year Warranty</p>
+        <p class="text-sm text-gray-400">On all treasures</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white pt-16 pb-10 border-t">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-serif text-rose-700 mb-3">Aetherbloom</h2>
+      <p class="text-gray-500">Curating beauty, intention, and soulful living.</p>
+      <p class="text-sm text-gray-400 mt-10">
+        © 2026 Aetherbloom • Practice Project for GitHub Pages
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
